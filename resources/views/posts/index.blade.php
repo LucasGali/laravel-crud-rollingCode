@@ -4,10 +4,10 @@
     <div class="row" style="margin-top: 5rem;">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 8 CRUD Example from scratch - laravelcode.com</h2>
+                <h2>Laravel 8 CRUD Example for Rolling Code</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('posts.create') }}"> Create New Post</a>
+                <a class="btn btn-success" href="{{ route('posts.create') }}"> Crear Nuevo Post</a>
             </div>
         </div>
     </div>
@@ -32,11 +32,11 @@
             <td>{{ \Str::limit($value->description, 100) }}</td>
             <td>
                 <form action="{{ route('posts.destroy',$value->id) }}" method="POST">   
-                    <a class="btn btn-info" href="{{ route('posts.show',$value->id) }}">Show</a>    
-                    <a class="btn btn-primary" href="{{ route('posts.edit',$value->id) }}">Edit</a>   
+                    <a class="btn btn-info" href="{{ route('posts.show',$value->id) }}">Mostrar</a>    
+                    <a class="btn btn-primary" href="{{ route('posts.edit',$value->id) }}">Editar</a>   
                     @csrf
                     @method('DELETE')      
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Borrar</button>
                 </form>
             </td>
         </tr>
